@@ -1,13 +1,7 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+// Dynamically show descriptions on hover
+document.querySelectorAll('.walkthrough-info').forEach(walkthrough => {
+    const description = walkthrough.dataset.description;
+    const descriptionElement = document.createElement('p');
+    descriptionElement.textContent = description;
+    walkthrough.appendChild(descriptionElement);
 });
