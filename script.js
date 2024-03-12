@@ -1,9 +1,15 @@
 // script.js
 
-// Dark Mode Toggle
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
-const body = document.querySelector('body');
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
-darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
