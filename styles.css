@@ -1,102 +1,40 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Add these styles for the dynamic effects */
+.walkthrough {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-/* Body styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
+.walkthrough-info {
+    width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.walkthrough-info img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.walkthrough-info h3 {
+    margin-top: 10px;
+    font-size: 18px;
     color: #333;
 }
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.walkthrough-info p {
+    display: none;
+    font-size: 14px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
+/* Show description on hover */
+.walkthrough-info:hover p {
+    display: block;
 }
 
-/* Navigation styles */
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main section styles */
-main {
-    padding: 20px;
-    margin-top: 80px; /* Adjust for fixed header */
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.social-icons {
-    display: flex;
-}
-
-.social-icons a {
-    margin-right: 10px;
-}
-
-.events {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.event {
-    width: calc(33.33% - 20px);
-    margin-right: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.projects, .highlights {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project, .highlight {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Scale image on hover */
+.walkthrough-info:hover img {
+    transform: scale(1.05);
 }
