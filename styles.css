@@ -27,6 +27,7 @@
 .walkthrough-info p {
     display: none;
     font-size: 14px;
+    margin-top: 5px; /* Add margin top for better spacing */
 }
 
 /* Show description on hover */
