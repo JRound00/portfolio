@@ -1,7 +1,7 @@
 /* Base styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #6c757d;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
@@ -9,9 +9,9 @@ body {
 
 /* Clear Navigation */
 .site-header {
-    background-color: #007bff;
+    background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -23,13 +23,12 @@ body {
 
 .main-nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .main-nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .main-nav ul li a:hover, .main-nav ul li a:focus {
@@ -54,7 +53,7 @@ body {
 .site-footer {
     text-align: center;
     padding: 20px;
-    background-color: #007bff;
+    background-color: #f3f3f3;
     color: white;
     margin-top: 20px;
 }
@@ -65,4 +64,55 @@ body {
         display: block;
         margin: 10px 0;
     }
+}
+
+/* Visual Enhancements */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+/* Enhancing Buttons and Links */
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+a.btn {
+    text-decoration: none;
+    display: inline-block;
 }
