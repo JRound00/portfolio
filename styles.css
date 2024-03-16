@@ -1,57 +1,68 @@
-/* Add these styles for the dynamic effects */
-.walkthrough {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.walkthrough-info {
-    width: 200px;
-    margin-bottom: 20px;
-    text-align: center;
-    cursor: pointer;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    transition: box-shadow 0.3s ease;
-}
-
-.walkthrough-info img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.walkthrough-info h3 {
-    margin-top: 10px;
-    font-size: 18px;
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
-.walkthrough-info p {
-    display: none;
-    font-size: 14px;
-    margin-top: 5px; /* Add margin top for better spacing */
+/* Clear Navigation */
+.site-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Show description on hover */
-.walkthrough-info:hover p {
-    display: block;
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Scale image on hover */
-.walkthrough-info:hover img {
-    transform: scale(1.05);
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.walkthrough-info:hover {
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a:focus {
+    color: #28a745;
+}
+
+/* Professional Design */
+.welcome-section, .about-me, .my-work {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* Portfolio Showcase */
+.my-work {
+    /* Additional styling for portfolio showcase */
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .walkthrough {
-        flex-direction: column;
-        align-items: center;
+    .main-nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 }
