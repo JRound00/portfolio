@@ -10,6 +10,11 @@
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
 }
 
 .walkthrough-info img {
@@ -38,6 +43,10 @@
 /* Scale image on hover */
 .walkthrough-info:hover img {
     transform: scale(1.05);
+}
+
+.walkthrough-info:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
